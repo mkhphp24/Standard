@@ -1,0 +1,37 @@
+{% extends 'base.html.admin.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+ {% block entityName %}
+   CmsCategory
+ {% endblock %}
+
+ {% block entityMenu %}
+     {{ parent() }}
+
+     <a href=" {{ path('admin_majpanel_grid_cmscategory_home') }}">
+         <div class="c-menu-item__title">
+        <span><i class="fa fa-angle-right ">
+            </i> CmsCategory </span>
+         </div>
+     </a>
+
+ {% endblock %}
+
+{% block body %}
+
+    <main class="l-main">
+        <div class="content-wrapper content-wrapper--with-bg">
+
+            <div class="col-lg-12">{{ react_component('RouterAdminCmsCategory') }}</div>
+
+        </div>
+    </main>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}
+
