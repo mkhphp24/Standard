@@ -10,7 +10,7 @@ you can use React and Symfony together ,In Addition you can use command line for
 
 Why MajPanel
 ===========
-MajPanel Generate crud (Create, read, update and delete ) DataBase Operation automatically trough Rest API and also create React Tabel in order to Manage your DataBase Tabel .
+MajPanel Generate crud (Create, read, update and delete ) DataBase Operation automatically trough Rest API and also create React Tabel in order to Manage your DataBase Tabel (JWT tokens for api security) .
 you can generate automatically  React Grid and API For your Entity  . 
 
 
@@ -82,7 +82,7 @@ How to reinstall Entity :
 =============
 Note : remove EntityName.yaml and regenerate all files again 
 ```
-php bin/console majpanel EntityName reinstall
+    php bin/console majpanel EntityName reinstall
 ```
 
 
@@ -90,19 +90,20 @@ php bin/console majpanel EntityName reinstall
 How to delete Entity : 
 =============
 ```
-php bin/console majpanel EntityName delete 
+    php bin/console majpanel EntityName delete 
 ```
 
 
 API PATH
 =============
-    - admin/majpanel/api/EntityName/getid/{type}/{id}/              //GET
-    - admin/majpanel/api/EntityName/search/{field}/{value}          //GET
-    - admin/majpanel/api/EntityName/del/                            //DEL
-    - admin/majpanel/api/EntityName/update/                         //PUT
-    - admin/majpanel/api/EntityName/insert/                         //POST
-    - admin/majpanel/api/city/getfiles/{id}                         //GET
-    - admin/majpanel/api/city/delfile/                              //POST
+    - /majpanel/api/EntityName/getid/{type}/{id}/              //GET
+    - /majpanel/api/EntityName/search/{field}/{value}          //GET
+    - /majpanel/api/city/getfiles/{id}                         //GET
+    - /majpanel/api/EntityName/del/                            //DELETE
+    - /majpanel/api/EntityName/update/                         //PUT
+    - /majpanel/api/EntityName/insert/                         //POST
+    - /majpanel/api/city/delfile/                              //POST
+    - /api/login_check                                         //POST
 
 
 
